@@ -1,3 +1,5 @@
+package(default_visibility = ["//visibility:public"])
+
 COMPILER_OPTS = [
     "-DNDEBUG=1",
     "-DHAVE_FDATASYNC=1",
