@@ -3,6 +3,17 @@ COMPILER_OPTS = [
     "-DHAVE_FDATASYNC=1",
 ]
 
+cc_binary(
+	name = "shell",
+	srcs = [
+		"shell.c"
+	],
+	deps = [
+		":sqlite3"
+	],
+	copts = ["-DSQLITE_CORE"] + COMPILER_OPTS,
+)
+
 cc_library(
 	name = "sqlite3",
 	hdrs = [
